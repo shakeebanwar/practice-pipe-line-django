@@ -4,5 +4,6 @@ channels_redis
 django-storages
 boto3
 Pillow
+django-cleanup
 
 
