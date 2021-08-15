@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '+xlr&wn@7*mr9-k&0l*ww5-3if9p91c5x6j&&wsw&w5(^w-z9^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'channels',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+#S3 BUCKETS CONFIG
+
+AWS_ACCESS_KEY_ID = 'AKIA57IYNILPJ45CH7JK'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'shakeeb-crm'
+
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+AWS_S3_REGION_NAME = 'us-east-2'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
