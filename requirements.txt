@@ -1,1 +1,9 @@
-Django
+Django==3.2.6
+channels
+channels_redis
+django-storages
+boto3
+Pillow
+django-cleanup
+
+
