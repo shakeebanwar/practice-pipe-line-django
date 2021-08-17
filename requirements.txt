@@ -5,6 +5,5 @@ django-storages
 boto3
 Pillow
 django-cleanup
-http2 
-tls
+Twisted[tls,http2]
 
