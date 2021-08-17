@@ -27,6 +27,8 @@
     const chatSocket = new WebSocket(
         'wss://'+ window.location.host+ '/ws/chat/'+ chanel+ '/'
     );
+    console.log("socket==>", 'wss://'+ window.location.host+ '/ws/chat/'+ chanel+ '/')
+
     chatSocket.onmessage = function(e) {
         const data = JSON.parse(e.data);
         console.log("my data is ",data)
