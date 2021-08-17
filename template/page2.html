@@ -25,7 +25,7 @@
 <script>
     const chanel="doctor1patient"
     const chatSocket = new WebSocket(
-        'wss://'+ window.location.host+ '/ws/chat/'+ chanel+ '/'
+        'ws://'+ window.location.host+ '/ws/chat/'+ chanel+ '/'
     );
     chatSocket.onmessage = function(e) {
         const data = JSON.parse(e.data);
