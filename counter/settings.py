@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '+xlr&wn@7*mr9-k&0l*ww5-3if9p91c5x6j&&wsw&w5(^w-z9^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -134,6 +134,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = (
+BASE_DIR / 'static',
+)
+
 
 
 
@@ -153,15 +158,5 @@ STATIC_URL = '/static/'
 
 
 
-AWS_ACCESS_KEY_ID = 'AKIASHOJQSG5QRYPLFWB'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'kroon-beta'
-
-
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-AWS_S3_REGION_NAME = 'us-east-1'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
